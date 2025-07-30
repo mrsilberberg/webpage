@@ -1,17 +1,13 @@
 {
-  "name": "Web Login Page",
-  "version": "1.1",
-  "slug": "web_login_page",
-  "description": "Add-on com login personalizado e dashboard",
-  "arch": ["amd64", "aarch64", "armv7"],
+  "name": "Servidor Node Express",
+  "version": "1.0",
+  "slug": "node_express_addon",
+  "description": "Add-on com servidor Express",
   "startup": "application",
   "boot": "auto",
-  "host_network": true
+  "arch": ["amd64", "aarch64"],
   "homeassistant": "2023.0.0",
-  "ports": {
-    "8080/tcp": 8080
-  },
-  "webui": "http://[HOST]:[PORT:8080]",
-  "init": false,
-  "panel_icon": "mdi:account-lock"
+  "options": {},
+  "schema": {},
+  "host_network": true
 }
