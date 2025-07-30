@@ -18,12 +18,12 @@ app.post('/login', (req, res) => {
   const users = JSON.parse(fs.readFileSync(path.join(__dirname, 'users.json')));
 
   if (users[username] && users[username] === password) {
-    res.send(\`
+    res.send(`
       <script>
-        localStorage.setItem('user', '\${username}');
+        localStorage.setItem('user', '${username}');
         window.location.href = "/dashboard.html";
       </script>
-    \`);
+    `);
   } else {
     res.send('<h3>❌ Login inválido</h3><a href="/login.html">Tentar novamente</a>');
   }
