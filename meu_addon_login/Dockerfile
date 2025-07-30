@@ -1,11 +1,11 @@
-FROM node:20-alpine
+FROM node:20
 
 WORKDIR /app
 
-COPY web /app
-COPY run.sh /run.sh
-RUN chmod +x /run.sh
+COPY package*.json ./
+RUN npm install
+
+COPY . .
 
 EXPOSE 8080
-
-CMD ["/run.sh"]
+CMD ["node", "server.js"]
