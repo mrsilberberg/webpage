@@ -1,13 +1,14 @@
 {
   "name": "Servidor Node Express",
   "version": "1.0",
-  "slug": "node_express_addon",
-  "description": "Add-on com servidor Express",
+  "slug": "meu_addon_login",
+  "description": "Servidor Express com login",
   "startup": "application",
   "boot": "auto",
-  "arch": ["amd64", "aarch64"],
   "homeassistant": "2023.0.0",
+  "arch": ["amd64", "aarch64"],
+  "host_network": true,
   "options": {},
-  "schema": {},
-  "host_network": true
+  "schema": {}
 }
+
