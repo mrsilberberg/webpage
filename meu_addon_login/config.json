@@ -6,6 +6,7 @@
   "arch": ["amd64", "aarch64", "armv7"],
   "startup": "application",
   "boot": "auto",
+  "host_network": true
   "homeassistant": "2023.0.0",
   "ports": {
     "8080/tcp": 8080
