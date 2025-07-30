@@ -1,11 +1,15 @@
-FROM node:20
+FROM node:20-alpine
 
+# Cria pasta de trabalho
 WORKDIR /app
 
-COPY package*.json ./
+# Copia arquivos
+COPY server.js ./
+COPY package.json ./
+COPY run.sh ./
+
+# Instala dependências
 RUN npm install
 
-COPY . .
-
-EXPOSE 8080
-CMD ["node", "server.js"]
+# Executa script
+CMD [ "./run.sh" ]
